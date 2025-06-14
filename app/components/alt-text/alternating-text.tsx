@@ -17,8 +17,8 @@ interface Props {
 export default function AlternatingText({ altTextData }: Props) {
   const { altTexts } = altTextData;
   return (
-    <Container className="alternating-text-container relative bg-yellow-300 text-sky-950">
-      <div>
+    <section className="alternating-text-container relative bg-yellow-300 px-4 text-sky-950 first:pt-10 md:px-6">
+      <div className="mx-auto flex w-full max-w-7xl flex-col items-center">
         <div className="relative z-[100] grid">
           <View className="alternating-text-view absolute top-0 left-0 h-screen w-full">
             <AltTextScene />
@@ -45,6 +45,6 @@ export default function AlternatingText({ altTextData }: Props) {
           ))}
         </div>
       </div>
-    </Container>
+    </section>
   );
 }

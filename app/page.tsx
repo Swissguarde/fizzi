@@ -13,7 +13,7 @@ export default async function Home() {
   const altTextData = await fetchAltTextData();
 
   return (
-    <div>
+    <section>
       <Header />
       <Hero
         heroData={heroData}
@@ -22,6 +22,6 @@ export default async function Home() {
       />
 
       <Footer />
-    </div>
+    </section>
   );
 }

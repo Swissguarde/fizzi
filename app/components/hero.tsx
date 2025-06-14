@@ -121,55 +121,57 @@ export default function Hero({ heroData, skyDiveData, altTextData }: Props) {
 
   return (
     <>
-      <Container className="hero opacity-0">
-        {isDesktop && (
-          <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
-            <Scene />
-            <Bubbles count={300} speed={2} repeat={true} />
-          </View>
-        )}
-        <div className="grid">
-          <div className="grid h-screen place-items-center">
-            <div className="grid auto-rows-min place-items-center text-center">
-              <h2 className="hero-header text-7xl leading-[0.8] font-black text-orange-500 uppercase md:text-[9rem] lg:text-[13rem]">
-                <TextSplitter
-                  text={heading}
-                  wordDisplayStyle="block"
-                  className="hero-header-word"
+      <section className="px-4 first:pt-10 md:px-6">
+        <div className="hero mx-auto flex w-full max-w-7xl flex-col items-center opacity-0">
+          {isDesktop && (
+            <View className="hero-scene pointer-events-none sticky top-0 z-50 -mt-[100vh] hidden h-screen w-screen md:block">
+              <Scene />
+              <Bubbles count={300} speed={2} repeat={true} />
+            </View>
+          )}
+          <div className="grid">
+            <div className="grid h-screen place-items-center">
+              <div className="grid auto-rows-min place-items-center text-center">
+                <h2 className="hero-header text-7xl leading-[0.8] font-black text-orange-500 uppercase md:text-[9rem] lg:text-[13rem]">
+                  <TextSplitter
+                    text={heading}
+                    wordDisplayStyle="block"
+                    className="hero-header-word"
+                  />
+                </h2>
+                <h3 className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
+                  {subheading}
+                </h3>
+                <p className="hero-body text-2xl font-normal text-sky-950">
+                  {description}
+                </p>
+                <CustomButton
+                  buttonLink={link}
+                  buttonText={text}
+                  className="hero-button mt-12"
                 />
-              </h2>
-              <h3 className="hero-subheading mt-12 text-5xl font-semibold text-sky-950 lg:text-6xl">
-                {subheading}
-              </h3>
-              <p className="hero-body text-2xl font-normal text-sky-950">
-                {description}
-              </p>
-              <CustomButton
-                buttonLink={link}
-                buttonText={text}
-                className="hero-button mt-12"
-              />
+              </div>
             </div>
-          </div>
-          <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
-            <Image
-              src="/images/all-cans-bunched.png"
-              alt="Soda_Image"
-              width={500}
-              height={500}
-              className="w-full md:hidden"
-            />
-            <div>
-              <h2 className="text-side-heading text-6xl font-black text-balance text-sky-950 uppercase lg:text-8xl">
-                <TextSplitter text={secondaryHeading} />
-              </h2>
-              <div className="text-side-body mt-4 max-w-xl text-xl font-normal text-balance text-sky-950">
-                <p>{secondaryDescription}</p>
+            <div className="text-side relative z-[80] grid h-screen items-center gap-4 md:grid-cols-2">
+              <Image
+                src="/images/all-cans-bunched.png"
+                alt="Soda_Image"
+                width={500}
+                height={500}
+                className="w-full md:hidden"
+              />
+              <div>
+                <h2 className="text-side-heading text-6xl font-black text-balance text-sky-950 uppercase lg:text-8xl">
+                  <TextSplitter text={secondaryHeading} />
+                </h2>
+                <div className="text-side-body mt-4 max-w-xl text-xl font-normal text-balance text-sky-950">
+                  <p>{secondaryDescription}</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </Container>
+      </section>
       <SkyDive skyDiveData={skyDiveData} />
       <Carousel />
       <AlternatingText altTextData={altTextData} />
