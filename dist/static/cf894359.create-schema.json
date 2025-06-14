@@ -1,0 +1,105 @@
+[
+  {
+    "fields": [
+      {
+        "name": "heading",
+        "type": "string"
+      },
+      {
+        "name": "subheading",
+        "type": "string",
+        "title": "Sub-Heading"
+      },
+      {
+        "name": "description",
+        "type": "text"
+      },
+      {
+        "fields": [
+          {
+            "name": "text",
+            "type": "string",
+            "title": "Button Text"
+          },
+          {
+            "validation": [
+              {
+                "rules": [
+                  {
+                    "flag": "uri",
+                    "constraint": {
+                      "options": {
+                        "scheme": [
+                          "/^http$/",
+                          "/^https$/"
+                        ],
+                        "allowRelative": false,
+                        "relativeOnly": false,
+                        "allowCredentials": false
+                      }
+                    }
+                  }
+                ],
+                "level": "error"
+              }
+            ],
+            "name": "link",
+            "type": "url",
+            "title": "Link URL"
+          }
+        ],
+        "name": "cta",
+        "type": "object",
+        "title": "Call to Action"
+      },
+      {
+        "name": "secondaryHeading",
+        "type": "string"
+      },
+      {
+        "name": "secondaryDescription",
+        "type": "text"
+      }
+    ],
+    "name": "hero",
+    "type": "document",
+    "title": "Hero Section"
+  },
+  {
+    "fields": [
+      {
+        "name": "title",
+        "type": "string"
+      }
+    ],
+    "name": "sky-dive",
+    "type": "document",
+    "title": "Sky Dive Section"
+  },
+  {
+    "fields": [
+      {
+        "of": [
+          {
+            "fields": [
+              {
+                "name": "title",
+                "type": "string"
+              },
+              {
+                "name": "description",
+                "type": "text"
+              }
+            ],
+            "type": "object"
+          }
+        ],
+        "name": "altTexts",
+        "type": "array"
+      }
+    ],
+    "name": "alt-text",
+    "type": "document",
+    "title": "Alt Text Array"
+  }
+]
