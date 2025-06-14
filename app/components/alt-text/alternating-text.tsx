@@ -3,7 +3,6 @@
 import { View } from "@react-three/drei";
 import AltTextScene from "./scene";
 import clsx from "clsx";
-import { Container } from "../container";
 
 interface Props {
   altTextData: {

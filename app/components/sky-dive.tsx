@@ -1,5 +1,4 @@
 import { View } from "@react-three/drei";
-import { Container } from "./container";
 import Scene from "./sky-dive-scene";
 
 interface Props {

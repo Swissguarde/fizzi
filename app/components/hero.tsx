@@ -4,7 +4,6 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Bubbles } from "./bubbles";
-import { Container } from "./container";
 import Scene from "./scene";
 import CustomButton from "./custom-button";
 import { TextSplitter } from "./text-split";
